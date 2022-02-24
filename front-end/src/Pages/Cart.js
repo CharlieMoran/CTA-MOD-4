@@ -2,18 +2,17 @@ import Footer from "../Components/Footer";
 import Header from "../Components/Header";
 import Nav from "../Components/Nav";
 import Scripts from "../Components/Scripts";
-import Menu from "../Components/Menu";
 
-const Menu = () => {
+
+const Home = () => {
   return (
     <div className="Index">
-        <Header />
         <Nav />
-        <Menu />
+      <h2>Your Cart Here</h2>
       <Footer />
       <Scripts />
     </div>
   );
 };
 
-export default Menu;
+export default Home;
