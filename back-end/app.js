@@ -1,6 +1,8 @@
 // DEPENDENCIES
 const cors = require("cors");
 const express = require("express");
+const bananaController = require("./controllers/bananaController.js")
+
 
 // CONFIGURATION
 const app = express();
@@ -19,23 +21,17 @@ app.use(express.json()); // Parse incoming JSON
 const main = require("./routes/main")
 app.use("/", main)
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
 const db = require("./db/dbConfig.js");
 
-app.get("/test", async (req, res) => {
-  try {
-    const allDays = await db.any("SELECT * FROM test");
-    res.json(allDays);
-  } catch (err) {
-    res.json(err);
-  }
+
+app.get("/", (req, res)=>{
+    res.send(`Welcome to Banana shop!`);
 });
 
-/////////////////////////////////////
-// REMOVE AFTER SUCCESSFUL DEPLOYMENT
-/////////////////////////////////////
+app.use("/snacks", snacksController)
 
-// EXPORT
+app.get("*", (req,res)=>{
+    res.status(404).json({error: "Page not found"})
+});
+
 module.exports = app;

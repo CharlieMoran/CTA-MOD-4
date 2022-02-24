@@ -11,20 +11,18 @@ const Form = (isEdit = false) => {
     name: "",
     fiber: "",
     protein: "",
-    added_sugar: "",
-    is_healthy: false,
     image: "",
   });
   useEffect(() => {
     if (isEdit) {
       axios.get(`${URL}/bananas/${id}`).then((response) => {
-        setbanana(response.data);
+        setBanana(response.data);
       });
     }
   }, [URL, id]);
 
   let handleChange = (event) => {
-     setbanana({ ...banana, [event.target.id]: event.target.value });
+     setBanana({ ...banana, [event.target.id]: event.target.value });
   };
 
   /* put request & post request */
