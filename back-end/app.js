@@ -4,15 +4,20 @@ const express = require("express");
 
 // CONFIGURATION
 const app = express();
+const config = {
+  views: "views",
+  static: "public",
+  logging: true,
+}
 
 // MIDDLEWARE
 app.use(cors());
 app.use(express.json()); // Parse incoming JSON
 
 // ROUTES
-app.get("/", (req, res) => {
-  res.send("Hello, world!");
-});
+
+const main = require("./routes/main")
+app.use("/", main)
 
 /////////////////////////////////////
 // REMOVE AFTER SUCCESSFUL DEPLOYMENT

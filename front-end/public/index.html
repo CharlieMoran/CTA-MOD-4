@@ -1,43 +1,690 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
+    <title>Banana Shop</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lovers+Quarrel" rel="stylesheet">
 
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/jquery.timepicker.css">
+
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    
+    <!-- Start of Nav -->
+	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Banana Shop</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="menu.html" class="nav-link">Menu</a></li>
+	        	<li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- End of Nav -->
+    
+    <section class="home-slider js-fullheight owl-carousel bg-white">
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container-fluid p-0">
+          <div class="row d-md-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(images/bananas/Cavendish-Banana.jpeg);">
+          		<div class="overlay"></div>
+          	</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text mt-md-5">
+		            <h1 class="mb-4">Eat Healthy <br> and Natural Foods</h1>
+		            <p>Bananas are love.</p>
+		            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Eat a banana</a></p>
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+      <div class="slider-item js-fullheight">
+      	<div class="overlay"></div>
+        <div class="container-fluid p-0">
+          <div class="row d-flex no-gutters slider-text js-fullheight align-items-center justify-content-end" data-scrollax-parent="true">
+          	<div class="one-third order-md-last img js-fullheight" style="background-image:url(images/bananas/Blue-Java-banana.jpeg);">
+          		<div class="overlay"></div>
+          	</div>
+	          <div class="one-forth d-flex js-fullheight align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+	          	<div class="text mt-md-5">
+		            <h1 class="mb-4">We Love <br> Delicious Bananas</h1>
+		            <p>Our Bananas are sourced from all over the world.</p>
+		            <p><a href="#" class="btn btn-primary px-4 py-3 mt-3">Order Bananas</a></p>
+	            </div>
+	          </div>
+        	</div>
+        </div>
+      </div>
+    </section>
+	
+    <!-- Welcome to Banana Shop -->
+		<section class="ftco-section ftco-wrap-about ftco-no-pb ftco-no-pt">
+			<div class="container">
+				<div class="row no-gutters">
+					<div class="col-sm-5 img img-2 d-flex align-items-center justify-content-center justify-content-md-end" style="background-image: url(images/bananas/banana-farm.jpeg); position: relative"></div>
+					<div class="col-sm-7 wrap-about py-5 ftco-animate">
+	          <div class="heading-section mt-5 mb-4">
+	          	<div class="pl-lg-5 ml-md-5">
+		          	<span class="subheading">About</span>
+		            <h2 class="mb-4">Welcome to the Banana Shop</h2>
+	            </div>
+	          </div>
+	          <div class="pl-lg-5 ml-md-5">
+							<p>There are many types of bananas in the world</p>
+							<h3 class="mt-5">Banana Types</h3>
+							<div class="thumb my-4 d-flex">
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url(images/bananas/Bluggoe-Banana.jpeg);"></div>
+	            		<h4>Bluggoe Bananas</h4>
+	            	</a>
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url(images/bananas/Barangan-Bananas.jpg);"></div>
+	            		<h4>Barangan Bananas</h4>
+	            	</a>
+	            	<a href="#" class="thumb-menu pr-md-4 text-center">
+	            		<div class="img" style="background-image: url(images/bananas/Fehi-Banana.jpg);"></div>
+	            		<h4>Fehi Bananas</h4>
+	            	</a>
+	            </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+    <!-- Banana Stats Container -->
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(images/bananas/banana-farm.jpeg);" data-stellar-background-ratio="0.5">
+    	<div class="container">
+    		<div class="row d-md-flex align-items-center justify-content-center">
+    			<div class="col-lg-10">
+    				<div class="row d-md-flex align-items-center">
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="42">0</strong>
+		                <span>Years Selling Bananas</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="9986000">0</strong>
+		                <span>Minutes Worked Here</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="420">0</strong>
+		                <span>Banana Farms</span>
+		              </div>
+		            </div>
+		          </div>
+		          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+		            <div class="block-18">
+		              <div class="text">
+		                <strong class="number" data-number="69">0</strong>
+		                <span>Companies</span>
+		              </div>
+		            </div>
+		          </div>
+	          </div>
+          </div>
+        </div>
+    	</div>
+    </section>
+
+    <!-- Menu -->
+    <section class="ftco-section">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section ftco-animate">
+          	<span class="subheading">Order</span>
+            <h2 class="mb-4">Our Menu</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+              <!-- Classic Bananas -->
+        			<h3>Classics</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Cavendish-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Cavendish</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$1.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>The classic common banana farmed organically with no pesticides.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Pisang-Raja-Banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Pisang Raja</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$2.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This banana is an indonesian favorite and will become one of yours too!</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Lady-Finger-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Lady Finger</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$3/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This little banana is packed with flavor and is perfect for any fruit salad or cocktail.</span></p>
+              </div>
+            </div>
+        	</div>
+
+          <!-- Uncommon Bananas -->
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Uncommon</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Red-Bananas.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Red Bananas</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$4.15/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This scary looking banana is less sweet but hearty.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Blue-Java-banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Blue Java</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$4.25/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This banana will leave you craving more with it's dulcet earthy tones and mouth watering flavor.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Gros-Michel-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Gros Michel</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$5.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This banana is used by top chefs for specialty dishes.</span></p>
+              </div>
+            </div>
+        	</div>
+
+          <!-- Exotic Bananas -->
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Exotic</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Dwarf-Jamaican-Banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Dwarf Jamaican</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$7.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>Premium bananas grown in Jamaica and sent to you. Enjoy a piece of this carribean staple.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Nanjangud-banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Nanjangud Rasabalehannu</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$9/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This indian banana medium sized banana is known for its sweetness and flavor!</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Macho-Plantain-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Macho Plantain</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$3.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>Commonly used in hispanic dishes the plantain when cooked will melt in your mouth.</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<!-- Special Order Bananas -->
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Special order</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Fehi-Banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Fehi</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$8.49</span>
+	                </div>
+	              </div>
+	              <p><span>This French Polynesian staple is delicious when baked or boiled especially if the slices are swathed in fresh coconut cream!</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Praying-Hands-Banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Praying Hands</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$11/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This partially conjoined banana is tastes semi-sweet with a hint of vanilla. </span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Orinoco-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Orinoco</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$15.49/lb</span>
+	                </div>
+	              </div>
+	              <p><span>This premium banana is silky smooth with a bright full flavor!</span></p>
+              </div>
+            </div>
+        	</div>
+        	
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Singles</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Ladys-Finger-Bananas.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Lady's Finger</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$2 ea</span>
+	                </div>
+	              </div>
+	              <p><span>This little banana is packed with flavor and is perfect for any fruit salad or cocktail.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Manzano-banana.jpg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Manzano</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$4 ea</span>
+	                </div>
+	              </div>
+	              <p><span>This gourmet banana has a delicious, sweet taste with a hint of apple and strawberry.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/Bluggoe-Banana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Bluggoe Banana</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$8 ea</span>
+	                </div>
+	              </div>
+	              <p><span>This premium plantain will blow your socks off!</span></p>
+              </div>
+            </div>
+        	</div>
+
+        	<div class="col-md-6 col-lg-4 menu-wrap">
+        		<div class="heading-menu text-center ftco-animate">
+        			<h3>Banana Merch</h3>
+        		</div>
+        		<div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/letsgobananas.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Lets Go Bananas Plush</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$30</span>
+	                </div>
+	              </div>
+	              <p><span>Squishy and soft, this little companion is perfect for any banana enthusiast! All proceeds will go to the GCB (Give Children Bananas) Foundation.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/kawaiibanana.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Kawaii Banana</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$40</span>
+	                </div>
+	              </div>
+	              <p><span>Oni-chan, please buy me! UwU  All proceeds will go to the GCB (Give Children Bananas) Foundation.</span></p>
+              </div>
+            </div>
+            <div class="menus d-flex ftco-animate">
+              <div class="menu-img img" style="background-image: url(images/bananas/banananft.jpeg);"></div>
+              <div class="text">
+              	<div class="d-flex">
+	                <div class="one-half">
+	                  <h3>Bananas</h3>
+	                </div>
+	                <div class="one-forth">
+	                  <span class="price">$121,500</span>
+	                </div>
+	              </div>
+	              <p><span>Bought second hand and now can be yours! All proceeds will go to the GCB (Give Children Bananas) Foundation.</span></p>
+              </div>
+            </div>
+        	</div>
+        </div>
+    	</div>
+
+    </section>
+
+    <section class="ftco-section testimony-section" style="background-image: url(images/bananas/banana-farm-2.jpeg);" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
+          	<span class="subheading">Testimonials</span>
+            <h2 class="mb-4">Satisfied Bananas</h2>
+          </div>
+        </div>
+        <div class="row ftco-animate justify-content-center">
+          <div class="col-md-7">
+            <div class="carousel-testimony owl-carousel ftco-owl">
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_1.png)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">If everyone ate bananas the world would be at peace.</p>
+                    <p class="name">Emperor Banana</p>
+                    <span class="position">Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_2.png)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">Nothing quite satisfies like bananas.</p>
+                    <p class="name">Countess Banana</p>
+                    <span class="position">Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_3.jpeg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">Consuming bananas yields a greater understanding of our universe.</p>
+                    <p class="name">Agent Banana</p>
+                    <span class="position">Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_4.png)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">There's nothing quite as delicious or as healthy as bananas.</p>
+                    <p class="name">Lord Banana</p>
+                    <span class="position">Customer</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="testimony-wrap text-center py-4 pb-5">
+                  <div class="user-img mb-4" style="background-image: url(images/person_5.jpeg)">
+                    <span class="quote d-flex align-items-center justify-content-center">
+                      <i class="icon-quote-left"></i>
+                    </span>
+                  </div>
+                  <div class="text p-3">
+                    <p class="mb-4">Bananas are a delicious way to start your day</p>
+                    <p class="name">Bananaman</p>
+                    <span class="position">Customer</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+			
+
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url(images/bananas/banana-farmer.jpeg);"></div>
+          <div class="col-md-7 ftco-animate makereservation p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+	          	<span class="subheading">Bulk Order?</span>
+	            <h2 class="mb-4">Book a Meeting</h2>
+	          </div>
+            <form action="#">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" placeholder="Your Name">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control" placeholder="Your Email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control" placeholder="Phone">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Date</label>
+                    <input type="text" class="form-control" id="book_date" placeholder="Date">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Time</label>
+                    <input type="text" class="form-control" id="book_time" placeholder="Time">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Person</label>
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                      <select name="" id="" class="form-control">
+                        <option value="">Person</option>
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4+</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="form-group">
+                    <input type="submit" value="Book a Meeting" class="btn btn-primary py-3 px-5">
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+			</div>
+		</section>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-md-6 col-lg-3 offset-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">I really love bananas</h2>
+              <p>Bananas are life</p>
+              <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+              </ul>
+            </div>
+		  </div>
+		  
+          <div class="col-md-6 col-lg-3">
+            <div class="ftco-footer-widget mb-4">
+              <h2 class="ftco-heading-2">Customer Service Hours (EST)</h2>
+              <ul class="list-unstyled open-hours">
+                <li class="d-flex"><span>Monday: </span><span> 9:00 am - 12:00 am</span></li>
+                <li class="d-flex"><span>Tuesday: </span><span> 9:00 am - 12:00 am</span></li>
+                <li class="d-flex"><span>Wednesday: </span><span> 9:00 am - 12:00 am</span></li>
+                <li class="d-flex"><span>Thursday: </span><span> 9:00 am - 12:00 am</span></li>
+                <li class="d-flex"><span>Friday: </span><span> 9:00 am - 02:00 am</span></li>
+                <li class="d-flex"><span>Saturday: </span><span> 9:00 am - 02:00 am</span></li>
+                <li class="d-flex"><span>Sunday: </span><span> Closed</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+		<div class="row">
+          <div class="col-md-12 text-center">
+          </div>
+        </div>
+      </div>
+    </footer>
+  
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+    
   </body>
 </html>
