@@ -45,7 +45,7 @@ bananas.post("/", async (req,res)=>{
                     payload: {
                         id: postBanana.id,
                         name: correctedBanana,
-                        image: "https://dummyimage.com/400x400/6e6c6e/e9e9f5.png&text=No+Image",
+                        image: "../front-end/public/images/no-banana.png",
                         fiber: postBanana.fiber,
                         protein: postBanana.protein,
                         added_sugar: postBanana.added_sugar,
