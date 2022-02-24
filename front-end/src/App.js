@@ -1,36 +1,47 @@
-import axios from "axios";
-import Nav from "./Components/Nav"
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
-import Scripts from "./Components/Scripts";
-import { useState, useEffect } from "react";
-const API = process.env.REACT_APP_API_URL;
+import CartHeader from './Components/CartHeader';
+import CartMain from './Components/CartMain';
+import ShoppingCart from './Components/ShoppingCart';
+import data from './data';
+import { useState } from 'react';
 
-console.log(API);
 function App() {
-  const [days, setDays] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${API}/test`)
-      .then(
-        (response) => {
-          setDays(response.data);
-        },
-        (error) => console.log("get", error)
-      )
-      .catch((c) => console.warn("catch", c));
-  }, []);
+  const { products } = data;
+  const [cartItems, setCartItems] = useState([]);
+  const onAdd = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist) {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+        )
+      );
+    } else {
+      setCartItems([...cartItems, { ...product, qty: 1 }]);
+    }
+  };
+  const onRemove = (product) => {
+    const exist = cartItems.find((x) => x.id === product.id);
+    if (exist.qty === 1) {
+      setCartItems(cartItems.filter((x) => x.id !== product.id));
+    } else {
+      setCartItems(
+        cartItems.map((x) =>
+          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+        )
+      );
+    }
+  };
   return (
-    <div>
-      <Header />
-      <Nav />
-      <ul>
-        {days.map((day) => (
-          <li key={day.name}>{day.name}</li>
-        ))}
-      </ul>
-      <Footer />
-      <Scripts />
+    <div className="App">
+      <CartHeader countCartItems={cartItems.length} />
+      <div className="row">
+        <CartMain products={products} onAdd={onAdd} />
+        <ShoppingCart
+          cartItems={cartItems}
+          onAdd={onAdd}
+          onRemove={onRemove}
+        />
+      </div>
     </div>
   );
 }

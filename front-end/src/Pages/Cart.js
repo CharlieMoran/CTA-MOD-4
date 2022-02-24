@@ -1,16 +1,16 @@
 import Footer from "../Components/Footer";
-import Header from "../Components/Header";
+import CartHeader from "../Components/CartHeader";
 import Nav from "../Components/Nav";
-import Scripts from "../Components/Scripts";
-
+import CartMain from "../Components/CartMain";
 
 const Home = () => {
   return (
     <div className="Index">
+        <CartMain />
         <Nav />
+        <CartHeader />
       <h2>Your Cart Here</h2>
       <Footer />
-      <Scripts />
     </div>
   );
 };
