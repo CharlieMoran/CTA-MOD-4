@@ -1,5 +1,5 @@
 const express = require('express');
-const { correctBanana, checkName , isBoolean } = require('../validations');
+const { correctBanana, checkName } = require('../validations');
 const bananas = express.Router();
 
 const {getAllBananas, getOneBanana, createBanana , deleteBanana, updateBanana} = require("../queries/Banana.js");
