@@ -1,5 +1,4 @@
 const express = require('express');
-const confirmHealth = require('../confirmHealth.js');
 const { correctBanana, checkName , isBoolean } = require('../validations');
 const bananas = express.Router();
 
@@ -48,8 +47,6 @@ bananas.post("/", async (req,res)=>{
                         image: "../front-end/public/images/no-banana.png",
                         fiber: postBanana.fiber,
                         protein: postBanana.protein,
-                        added_sugar: postBanana.added_sugar,
-                        is_healthy: confirmHealth(postBanana),
                     }
             });
 
@@ -63,9 +60,7 @@ bananas.post("/", async (req,res)=>{
                         name: correctedBanana,
                         image: postBanana.image,
                         fiber: postBanana.fiber,
-                        protein: postBanana.protein,
-                        added_sugar: postBanana.added_sugar,
-                        is_healthy: confirmHealth(postBanana),      
+                        protein: postBanana.protein,   
                     }
             });
 
