@@ -10,8 +10,8 @@ function Nav () {
               <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="index.html" class="nav-link">Blog</a></li>
                     <li class="nav-item"><a href="cart.html" class="nav-link">🛒Cart🛒</a></li>
                 </ul>
               </div>
