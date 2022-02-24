@@ -171,4 +171,5 @@ The content of the `_redirects` file should be
 [More info](https://www.netlify.com/blog/2016/07/22/deploy-react-apps-in-less-than-30-seconds/#main)
 
 [Front-End](https://banana-shop.netlify.app/)
+<br />
 [Back-End](https://git.heroku.com/cta-mod-4.git)
