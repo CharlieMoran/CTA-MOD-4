@@ -1,3 +1,5 @@
+import Cart from "../Pages/Cart.js"
+
 function Nav () {
         return (
             <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
@@ -12,7 +14,7 @@ function Nav () {
                     <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">About</a></li>
                     <li class="nav-item"><a href="index.html" class="nav-link">Menu</a></li>
-                    <li class="nav-item"><a href="cart.html" class="nav-link">🛒Cart🛒</a></li>
+                    <li class="nav-item"><a href={Cart} class="nav-link">🛒Cart🛒</a></li>
                 </ul>
               </div>
             </div>
