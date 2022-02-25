@@ -9,13 +9,16 @@ import Nav from './Components/Nav';
 
 function App() {
   const { products } = data;
+  /* Cart Hook */
   const [cartItems, setCartItems] = useState([]);
+  /* Adding to Cart */
   const onAdd = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist) {
+    const found = cartItems.find((x) => x.id === product.id);
+    if (found) {
+    /* Update Quantity */
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty + 1 } : x
+          x.id === product.id ? { ...found, qty: found.qty + 1 } : x
         )
       );
     } else {
@@ -23,13 +26,13 @@ function App() {
     }
   };
   const onRemove = (product) => {
-    const exist = cartItems.find((x) => x.id === product.id);
-    if (exist.qty === 1) {
+    const found = cartItems.find((x) => x.id === product.id);
+    if (found.qty === 1) {
       setCartItems(cartItems.filter((x) => x.id !== product.id));
     } else {
       setCartItems(
         cartItems.map((x) =>
-          x.id === product.id ? { ...exist, qty: exist.qty - 1 } : x
+          x.id === product.id ? { ...found, qty: found.qty - 1 } : x
         )
       );
     }
