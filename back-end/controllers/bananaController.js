@@ -5,7 +5,6 @@ const bananas = express.Router();
 const {getAllBananas, getOneBanana, createBanana , deleteBanana, updateBanana} = require("../queries/Banana.js");
   
 bananas.get("/", async (req,res)=>{
-
     try{
         const allBananas = await getAllBananas();
         if(allBananas.length){
@@ -63,11 +62,9 @@ bananas.post("/", async (req,res)=>{
                         protein: postBanana.protein,   
                     }
             });
-
         } else {
             res.status(404).json({success: false, payload: "Banana not found"});
         }
-
     }catch(err){
         console.log(err);
     }

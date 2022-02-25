@@ -1,8 +1,11 @@
 import CartHeader from './Components/CartHeader';
 import CartMain from './Components/CartMain';
 import ShoppingCart from './Components/ShoppingCart';
+import Home from './Pages/Home';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import data from './data';
 import { useState } from 'react';
+import Nav from './Components/Nav';
 
 function App() {
   const { products } = data;
@@ -33,15 +36,13 @@ function App() {
   };
   return (
     <BrowserRouter>
-        <NavBar />
+        <Nav />
           <main>
             <div className="App">
               <Routes>
               <Route exact path="/" element={<Home />} />
-              <Route path="/:id" element={<Details />} />
-              <Route path="/new" element={<New />} />
-              <Route path="/edit" element={<Edit />} />
-              <Route path="*" element={<PageNF />} />
+              <Route path="/About" element={<Home />} />
+              <Route path="/Menu" element={<Home />} />
               </Routes>
         <CartHeader countCartItems={cartItems.length} />
         <div className="row">

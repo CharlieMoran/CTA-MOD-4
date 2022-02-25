@@ -10,8 +10,8 @@ const Menu = () => {
         <Header />
         <Nav />
         <Menu />
-      <Footer />
-      <Scripts />
+        <Footer />
+        <Scripts />
     </div>
   );
 };

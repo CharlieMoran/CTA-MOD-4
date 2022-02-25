@@ -9,8 +9,7 @@ const Home = () => {
         <CartMain />
         <Nav />
         <CartHeader />
-      <h2>Your Cart Here</h2>
-      <Footer />
+        <Footer />
     </div>
   );
 };

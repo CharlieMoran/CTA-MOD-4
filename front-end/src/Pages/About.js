@@ -9,9 +9,8 @@ const About = () => {
     <div className="Index">
         <Header />
         <Nav />
-      <h2>We are banana salesman from across the world. We pride ourselves in the best bananas money can buy!</h2>
-      <Footer />
-      <Scripts />
+        <Footer />
+        <Scripts />
     </div>
   );
 };

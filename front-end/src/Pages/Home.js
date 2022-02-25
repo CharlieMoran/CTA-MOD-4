@@ -9,9 +9,8 @@ const Home = () => {
     <div className="Index">
         <Header />
         <Nav />
-      <h2>Welcome to the Banana Shop!</h2>
-      <Footer />
-      <Scripts />
+        <Footer />
+        <Scripts />
     </div>
   );
 };
