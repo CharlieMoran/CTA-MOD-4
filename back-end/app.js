@@ -28,7 +28,7 @@ app.get("/", (req, res)=>{
     res.send(`Welcome to Banana shop!`);
 });
 
-app.use("/snacks", snacksController)
+app.use("/bananashop", bananaController)
 
 app.get("*", (req,res)=>{
     res.status(404).json({error: "Page not found"})
