@@ -32,17 +32,29 @@ function App() {
     }
   };
   return (
-    <div className="App">
-      <CartHeader countCartItems={cartItems.length} />
-      <div className="row">
+    <BrowserRouter>
+        <NavBar />
+          <main>
+            <div className="App">
+              <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/:id" element={<Details />} />
+              <Route path="/new" element={<New />} />
+              <Route path="/edit" element={<Edit />} />
+              <Route path="*" element={<PageNF />} />
+              </Routes>
+        <CartHeader countCartItems={cartItems.length} />
+        <div className="row">
         <CartMain products={products} onAdd={onAdd} />
         <ShoppingCart
           cartItems={cartItems}
           onAdd={onAdd}
           onRemove={onRemove}
         />
-      </div>
-    </div>
+          </div>
+        </div>
+      </main>
+    </BrowserRouter>
   );
 }
 
